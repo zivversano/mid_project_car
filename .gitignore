@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Spark / streaming checkpoints
+checkpoints/
+
+# Local env / editor
+.venv/
+.vscode/
+.idea/
+
+# OS
+.DS_Store
