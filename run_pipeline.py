@@ -1,23 +1,3 @@
-"""Run the mid_project_car pipeline.
-
-This project is built around long-running jobs (Kafka producer + Spark Structured Streaming).
-A traditional "run script A, wait until it finishes, then run B" doesn't work because these
-jobs typically run forever.
-
-This runner supports two practical modes:
-
-- default: start all steps in order (generator -> enrichment -> detection -> counter)
-           and keep them running together.
-- --sequential: run each step and wait; when you press Ctrl+C, the current step is
-                interrupted and the runner proceeds to the next step.
-
-Run from repo root:
-  /bin/python3 mid_project_car/run_pipeline.py
-
-Or from this folder:
-  cd mid_project_car && /bin/python3 run_pipeline.py
-"""
-
 from __future__ import annotations
 
 import argparse
