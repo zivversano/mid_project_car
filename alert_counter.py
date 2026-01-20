@@ -1,25 +1,3 @@
-"""AlertCounter
-
-Object Name: AlertCounter
-Input KAFKA topics: anomaly-alerts, alert-data
-Output: console
-
-Logic:
-- Print aggregations across all data in the last 15 minutes
-
-Aggregations:
-- num_of_rows: Total number of rows
-- num_of_black: Count rows with color == black
-- num_of_white: Count rows with color == white
-- num_of_silver: Count rows with color == silver
-- maximum_speed: The maximum speed
-- maximum_gear: The maximum gear
-- maximum_rpm: The maximum rpm
-
-Run from this folder so local imports work:
-  cd mid_project_car && KAFKA_BOOTSTRAP_SERVERS=host.docker.internal:29092 /bin/python3 alert_counter.py
-"""
-
 import os
 import time
 
