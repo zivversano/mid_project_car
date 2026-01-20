@@ -1,20 +1,3 @@
-"""AlertDetection
-
-Object Name: AlertDetection
-Input KAFKA topic: samples-enriched
-Output KAFKA topic: alert-data
-
-Logic:
-- Filter rows to keep only alerting rows
-- Alert conditions:
-  - speed > 120
-  - expected_gear != gear
-  - rpm > 6000
-
-Run from this folder so local imports work:
-  cd mid_project_car && KAFKA_BOOTSTRAP_SERVERS=host.docker.internal:29092 /bin/python3 alert_detection.py
-"""
-
 from pyspark.sql import functions as F
 from pyspark.sql import types as T
 
