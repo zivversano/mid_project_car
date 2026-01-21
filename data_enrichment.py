@@ -1,21 +1,3 @@
-"""DataEnrichment
-
-Object Name: DataEnrichment
-Input KAFKA topic: sensors-sample
-Output KAFKA topic: samples-enriched
-
-Logic:
-- Add to each event:
-  - driver_id
-  - brand_name
-  - model_name
-  - color_name
-  - expected_gear = round(speed/30)
-
-Run from this folder so local imports work:
-  cd mid_project_car && /bin/python3 data_enrichment.py
-"""
-
 from pyspark.sql import functions as F
 from pyspark.sql import types as T
 
