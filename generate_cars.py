@@ -38,7 +38,7 @@ def main() -> None:
     seed = os.getenv("CARS_SEED")
     rng = random.Random(int(seed)) if seed is not None else random.Random()
 
-    car_ids = _generate_unique_numbers(count=count, digits=7, rng=rng)
+    car_ids = _generate_unique_numbers(count=count, digits=9, rng=rng)
     driver_ids = _generate_unique_numbers(count=count, digits=9, rng=rng)
 
     rows = [
